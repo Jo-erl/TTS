@@ -6,6 +6,12 @@
 
 }
 
+Body {
+  margin: 8px;
+  background-color: black;
+  padding: 0px;
+}
+
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -139,4 +145,23 @@ select {
     pointer-events: none; /* Ensure the icon doesn't interfere with the select element */
   }
 }
+
+/*=============== FOOTER2 ===============*/
+
+.footer2 {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0; /* Adjust the padding as needed */
+  background-color: #000000;
+  position: absolute;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  margin: 0; 
+  left: 0; 
+  right: 0; 
+}
+.footer2 p{
+  color: #aaaaaa;
+}
+
 
