@@ -24,28 +24,68 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
   </head>
   <body>
-
-<div class="hero">
-    <h1>Text To Speech <span>Converter</span></h1>
-    <textarea placeholder="Write text here..."></textarea>
-    <div class="row">
+    <!--=======================================================-->
+    <div class="hero">
+      <h1>Text To Speech <span>Converter</span></h1>
+      <textarea placeholder="Write text here..."></textarea>
+      <div class="row">
         <select></select>
-        <button><img src="images/play.png">Listen</button>
+        <button><img src="images/play.png" />Listen</button>
+      </div>
     </div>
-</div>
 
+    <!--=======================================================-->
+    <!--Footer-->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="logo">
+          <a href="https://jo-erl.github.io/joelanangportfolio/" target="_blank"
+            >Joel Anang<span>.</span></a
+          >
+        </div>
+        <p class="copyright">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved
+        </p>
+      </div>
+    </footer>
+    <!--Footer end-->
+    <!--=======================================================-->
 
-<!--Footer2-->
-<section class="footer2">
+    <script>
+      // Footer functionality
+      const footer = document.querySelector("footer");
+      const currentYearSpan = document.querySelector(".current-year");
 
-  <p>All Rights Reserved &copy; <span id="currentYear"></span> <a href="https://jo-erl.github.io/joelanangportfolio/" style="color: rgb(0, 255, 68);" target="_blank">JoErl</a></p>
+      // Set the current year in the footer
+      if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+      }
 
-  <script>
-    // JavaScript to automatically update the year
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-  </script>
-</section>
-<!--End of Footer-->
-<script src="script.js"></script>
+      function handleScroll() {
+        // Footer reveal animation
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (footerRect.bottom <= windowHeight + 100) {
+          footer.classList.add("reveal");
+        } else {
+          footer.classList.remove("reveal");
+        }
+
+        // Footer parallax effect
+        const scrollPosition = window.pageYOffset;
+        const parallaxOffset = scrollPosition * 0.3;
+        footer.style.backgroundPositionY = `${parallaxOffset}px`;
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+    </script>
+    <!--=======================================================-->
+    <script src="script.js"></script>
   </body>
 </html>
