@@ -1,7 +1,6 @@
 # TTS
 A simple text-to-speech webapp.<br><br>
 
-<a href="https://jo-erl.github.io/TTS/">Demo Link</a><br><br>
-
-
-![15](https://github.com/Jo-erl/3dcarousel/assets/133300552/aafaa6fe-945e-47ac-a544-757c8e68a024)
+<a href="https://jo-erl.github.io/TTS/">Demo Link</a><br>
+## Screenshot
+![TTS](https://github.com/user-attachments/assets/94aacb93-6a77-40c5-a7bd-4ad9ef6e42ac)
